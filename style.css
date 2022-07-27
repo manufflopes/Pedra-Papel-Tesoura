@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'Pilot';
+    src: url('./fontes/PilotCommand.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pilot';
+    src: url('./fontes/PilotCommandBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PilotHalf';
+    src: url('./fontes/PilotCommandHalftone.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pilot3D';
+    src: url('./fontes/PilotCommand3D.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --cinza: #576066;
+    --azul: #004fffff;
+    --azul_claro: #31afd4ff;
+    --magenta: #902d41ff;
+    --rosa: #ff007fff;
+    --verde: #2c514c;
+    --rosabebe: #95818d;
+    --rosinha: #e3c0d3;
+    --chumbo: #122932;
+    --roxo: #412234ff;
+    --violeta: #6d466bff;
+    --lavanda: #b49fccff;
+    --rosa-mistica: #ead7d7ff;
+    --roxo-escuro: #1f0322ff;
+--pinksao: #8a1c7cff;
+--barbie: #da4167ff;
+--rosa-iogurte: #f0bcd4ff;
+--pistache: #899d78ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--cinza);
+}
+h1 {
+    font-family: 'PilotHalf', Courier, monospace;
+    font-size: 150px;
+    color: var(--rosa);
+    text-align: center;
+}
+main {
+    max-width: 80%;
+    background-color: var(--rosabebe);
+    margin: auto;
+}
+.options {
+    display: flex;
+    padding: 50px 30px 0px 30px;
+    justify-content: space-around;
+    align-items: center;
+}
+.img_options {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+}
+.img_options img {
+    height: 200px;
+    width: auto;
+}
+.options span,
+.score span {
+    font-size: 200px;
+    font-family: 'Pilot', Courier, monospace;
+    font-weight: bold;
+    color: var(--rosa);
+}
+.score strong {
+    font-size: 200px;
+    font-family: 'Pilot3D', Courier, monospace;
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 30px 50px;
+}
+.gameControls {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--azul_claro);
+}
+.gameControls button {
+    font-size: 50px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 50px;
+    border: none;
+    overflow: hidden;
+}
+
+.gameControls button img {
+    height: 80px;
+    padding: 10px;
+}
