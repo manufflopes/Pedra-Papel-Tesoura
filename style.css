@@ -1,3 +1,8 @@
+<style> 
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@900&display=swap');
+</style>
+
+
 @font-face {
     font-family: 'Pilot';
     src: url('./fontes/PilotCommand.otf') format('opentype');
@@ -24,24 +29,16 @@
 }
 
 :root {
-    --cinza: #576066;
-    --azul: #004fffff;
-    --azul_claro: #31afd4ff;
-    --magenta: #902d41ff;
-    --rosa: #ff007fff;
-    --verde: #2c514c;
-    --rosabebe: #95818d;
-    --rosinha: #e3c0d3;
     --chumbo: #122932;
-    --roxo: #412234ff;
-    --violeta: #6d466bff;
     --lavanda: #b49fccff;
-    --rosa-mistica: #ead7d7ff;
-    --roxo-escuro: #1f0322ff;
---pinksao: #8a1c7cff;
---barbie: #da4167ff;
---rosa-iogurte: #f0bcd4ff;
---pistache: #899d78ff;
+    --mindaro: #d6ff79ff;
+    --mint-green: #b0ff92ff;
+    --rhythm: #7c72a0ff;
+    --color1: #31827c ;
+    --color2: #95c68f ;
+    --color3: #f7e9aa ;
+    --color4: #fc8a80 ;
+    --color5: #fd4e6d ;
 }
 
 * {
@@ -52,72 +49,87 @@
 
 body {
     height: 100vh;
-    background-color: var(--cinza);
+    background-color: var(--lavanda);
 }
 h1 {
-    font-family: 'PilotHalf', Courier, monospace;
+    font-family: 'Pilot3d', Courier, monospace;
     font-size: 150px;
-    color: var(--rosa);
+    color: var(--color1);
     text-align: center;
+    margin-bottom: 50px;
 }
 main {
     max-width: 80%;
-    background-color: var(--rosabebe);
+   
     margin: auto;
 }
 .options {
     display: flex;
     padding: 50px 30px 0px 30px;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    background-color: var(--color2);
 }
 .img_options {
-    background-color: white;
+ 
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 300px;
-    width: 300px;
-    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    border: 1px solid var(--rhythm);
+    border-radius: 50%;
+    background-color: var(--color3);
 }
 .img_options img {
-    height: 200px;
+    height: 150px;
     width: auto;
 }
 .options span,
 .score span {
-    font-size: 200px;
+    font-size: 150px;
     font-family: 'Pilot', Courier, monospace;
     font-weight: bold;
-    color: var(--rosa);
+    color: var(--color1);
 }
 .score strong {
-    font-size: 200px;
+    font-size: 100px;
     font-family: 'Pilot3D', Courier, monospace;
+    width: 200px;
+    text-align: center;
+    color: var(--color1);
 }
 
 .score {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 0 30px 50px;
+    background-color: var(--color2);
 }
 .gameControls {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: var(--azul_claro);
+    background-color: var(--color4);
 }
 .gameControls button {
-    font-size: 50px;
     height: 100px;
+    width: 100px;
     margin: 20px;
     border-radius: 50px;
     border: none;
     overflow: hidden;
+    background-color: var(--color3);
+    border: 1px solid var(--rhythm);
 }
 
 .gameControls button img {
-    height: 80px;
+    height: 100%;
     padding: 10px;
+}
+
+footer{
+    background-color: var(--color5);
+    
 }
