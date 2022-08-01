@@ -50,10 +50,10 @@ body {
 }
 h1 {
     font-family: 'Pilot3d', Courier, monospace;
-    font-size: 150px;
+    font-size: 100px;
     color: var(--color5);
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 main {
     min-width: 80%;
@@ -82,7 +82,7 @@ main {
 }
 .options span,
 .score_play span {
-    font-size: 150px;
+    font-size: 110px;
     font-family: 'Pilot', Courier, monospace;
     font-weight: bold;
     color: var(--color5);
@@ -119,6 +119,10 @@ main {
     border: 1px solid var(--rhythm);
 }
 
+.gameControls button:disabled {
+    cursor: not-allowed;
+}
+
 .gameControls button img {
     height: 100%;
     padding: 10px;
@@ -147,10 +151,26 @@ footer strong {
 .score span {
     font-size: 20px;
 
-    
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .winner {
     font-size: 15px;
+    height: 90px;
+}
+
+.robo {
+    background: url('./imagens/robo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.jogador {
+    background: url('./imagens/jogador.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.draw {
+    background: url('./imagens/empate.png');
+    background-repeat: no-repeat;
+    background-size: contain;
 }
