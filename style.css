@@ -47,7 +47,9 @@ body {
     background-color: var(--lavanda);
     display: flex;
     flex-direction: column;
+    color: var(--chumbo);
 }
+
 h1 {
     font-family: 'Pilot3d', Courier, monospace;
     font-size: 100px;
@@ -55,17 +57,24 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
 }
+
 main {
-    min-width: 80%;
-    margin: auto;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
+
+/* referentes a primeira parte do jogo... onde temos a imagem das jogadas tanto do jogador qnto computador*/
 .options {
     display: flex;
-    padding: 50px 30px 0px 30px;
+    padding: 20px;
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--color2);
 }
+
 .img_options {
     display: flex;
     align-items: center;
@@ -76,23 +85,39 @@ main {
     border-radius: 50%;
     background-color: var(--color3);
 }
+
 .img_options img {
     height: 150px;
     width: auto;
 }
+
 .options span,
 .score_play span {
     font-size: 110px;
     font-family: 'Pilot', Courier, monospace;
     font-weight: bold;
-    color: var(--color5);
 }
-.score_play strong {
-    font-size: 100px;
+
+.playerContainer {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.playerContainer h2 {
+    font-size: 50px;
+    font-family: 'Pilot', Courier, monospace;
+    margin-bottom: 20px;
+}
+
+.playerContainer strong {
+    font-size: 80px;
     font-family: 'Pilot3D', Courier, monospace;
     width: 200px;
     text-align: center;
-    color: var(--color5);
+    margin-top: 20px;
 }
 
 .score_play {
@@ -102,21 +127,47 @@ main {
     padding: 0 30px 50px;
     background-color: var(--color2);
 }
+
+/* são as maozinhas para jogar*/
+
 .gameControls {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--color4);
+
+    flex: 1;
 }
-.gameControls button {
-    height: 100px;
-    width: 100px;
+
+.gameControls button:not(.resetButton) {
+    flex: 1;
+    max-height: 120px;
+    max-width: 120px;
     margin: 20px;
-    border-radius: 50px;
-    border: none;
+    border-radius: 60px;
+
     overflow: hidden;
     background-color: var(--color3);
     border: 1px solid var(--rhythm);
+    box-shadow: 3px 3px 5px 0 var(--chumbo);
+}
+
+.gameControls button:not(.resetButton):hover {
+    max-height: 130px;
+    max-width: 130px;
+    border-radius: 65px;
+    border: 2px solid var(--rhythm);
+    box-shadow: 3px 3px 5px 0 var(--chumbo);
+}
+
+.gameControls button.resetButton {
+    border-radius: 60px;
+    background-color: var(--color3);
+    border: 1px solid var(--rhythm);
+    box-shadow: 3px 3px 5px 0 var(--chumbo);
+    font-size: 40px;
+    padding: 20px;
+    margin: 20px;
 }
 
 .gameControls button:disabled {
@@ -124,15 +175,14 @@ main {
 }
 
 .gameControls button img {
-    height: 100%;
+    height: 120px;
     padding: 10px;
 }
 
 footer {
     background-color: var(--mindaro);
-    min-width: 80%;
-    margin: auto;
-    flex: 1;
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
@@ -142,6 +192,7 @@ footer strong {
     font-family: 'Pilot', Courier, monospace;
     margin: 10px auto;
 }
+
 .score {
     display: flex;
     text-align: center;
@@ -164,11 +215,13 @@ footer strong {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
 .jogador {
     background: url('./imagens/jogador.png');
     background-repeat: no-repeat;
     background-size: contain;
 }
+
 .draw {
     background: url('./imagens/empate.png');
     background-repeat: no-repeat;

@@ -78,6 +78,7 @@ function blockButtons() {
     let gameSection = document.querySelector('.gameControls')
     let resetGameButton = document.createElement('button')
     resetGameButton.innerHTML = 'Reiniciar Jogo'
+    resetGameButton.classList.add ('resetButton')
     resetGameButton.addEventListener('click', function () {
         document.location.reload()
     })
